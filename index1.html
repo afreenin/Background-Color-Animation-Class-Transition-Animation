@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<style>
+		.para2{
+			margin-top: 15px;
+			padding: 15px;
+			border: 1px solid#999999;
+			min-height: 500px;
+		}
+		.mydiv{
+			width: 600px; margin: 0 auto; border: 1px solid#222222;
+			padding: 5px 10px; font-size: 15px; text-align: justify;
+		}
+		.liveDiv{
+			background:#cccccc; font-size: 20px; color:#000000; border: 4px solid#666666;
+			padding: 5px; width: 500px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h3>Class Transition Animation</h3>
+		<div class="para2">
+			<div class="mydiv" id="makeAnimate">
+				Jquery is very essential library function of Java. Jquery is very essential library function of Java. Jquery is very essential library function of Java.
+				Jquery is very essential library function of Java. Jquery is very essential library function of Java. Jquery is very essential library function of Java.
+				Jquery is very essential library function of Java. Jquery is very essential library function of Java. Jquery is very essential library function of Java.
+			</div>	
+			<button id="showAnimate">Animate</button>
+		</div>
+	</div>
+
+<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var colorHandle=true;
+		$("#showAnimate").click(function(){
+			if(colorHandle){
+				$("#makeAnimate").addClass('liveDiv',2000,'easeInQuart',function(){
+					alert("Animation completed....");
+				});
+			}else{
+				$("#makeAnimate").removeClass('liveDiv',2000);
+			}
+			colorHandle=!colorHandle;
+			
+		});	
+});	
+</script>
+
+</body>
+</html>
